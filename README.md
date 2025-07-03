@@ -175,8 +175,6 @@ The profile page connects to the following API endpoints:
 ```
 
 ## 🛠️ Built With
-
-### **Frontend**
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge\&logo=vite\&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge\&logo=tailwind-css\&logoColor=white)
@@ -185,11 +183,7 @@ The profile page connects to the following API endpoints:
 ![Recharts](https://img.shields.io/badge/Recharts-FF6384?style=for-the-badge\&logo=recharts\&logoColor=white)
 ![Headless UI](https://img.shields.io/badge/HeadlessUI-000000?style=for-the-badge\&logo=tailwind-css\&logoColor=white)
 ![Lucide](https://img.shields.io/badge/Lucide-000000?style=for-the-badge\&logo=lucide\&logoColor=white)
-
-### **Backend**
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=node.js\&logoColor=white)
-
-### **Database**
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
 
 ---
