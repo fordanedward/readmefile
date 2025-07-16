@@ -1,178 +1,116 @@
-# 🎯 Gordon College Capture the Flag (GC Capture)
+# GC Capture / Gordon College CTF
 
-![GC Banner](https://via.placeholder.com/800x200.png?text=Gordon+College+Capture+the+Flag)
-
----
-
-## 🏁 What is GC Capture?
-
-**Gordon College Capture the Flag (GC Capture)** is a cybersecurity challenge platform designed for Gordon College students to practice, compete, and enhance their cybersecurity skills through real-world problem-solving.
+Welcome to GC Capture, a platform where you can train, compete, and build your cybersecurity skills through fun and realistic CTF (Capture The Flag) challenges.
 
 ---
 
-## ✨ Features
+## Quick Start Guide
 
-- 🕵️‍♂️ Realistic Cybersecurity Challenges  
-- 🧩 Various Categories: Web, Forensics, Cryptography, and more  
-- 🎉 Competitive and Educational Environment  
-- 🏆 Leaderboard and Achievements  
-- 💡 Beginner-Friendly & Advanced Levels  
+### Installation
 
----
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/Project_Capture.git
+   cd Project_Capture
+   ```
 
-## 📸 Screenshots
+2. **Install dependencies:**
+   ```bash
+   npm install
+   npm install react-icons recharts tw-animate-css chart.js react-chartjs-2
+   ```
 
-| Challenge Preview                           | Leaderboard Example                          |
-|---------------------------------------------|----------------------------------------------|
-| ![Challenges](https://via.placeholder.com/400x200.png?text=Challenge+Preview) | ![Leaderboard](https://via.placeholder.com/400x200.png?text=Leaderboard) |
-
----
-
-## 🛠️ Built With
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+3. **Start the app:**
+   ```bash
+   npm run dev
+   ```
+   The app will be accessible at: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🚀 Getting Started
+## How to Use the Application
 
-```bash
-git clone https://github.com/yourusername/gc-capture.git
-cd gc-capture
-npm install
-npm run dev
+### 1. Login
 
-
-# 📘 GC Capture (Gordon College CTF) – README Guide
-
-## 📋 Table of Contents
-
-- [🧭 Introduction](#-introduction)
-- [🧱 Structure of a README.md](#-structure-of-a-readmemd)
-- [🔖 Title and Description](#-title-and-description)
-- [🛠️ Installation](#️-installation)
-- [🚀 Usage](#-usage)
-  - [Public/User Routes](#publicuser-routes)
-  - [Admin Routes](#admin-routes)
-- [🤝 Contributing](#-contributing)
+- Go to `/login`
+- Enter your credentials to sign in as a user or admin
 
 ---
 
-## 🧭 Introduction
+### 2. User Features
 
-Welcome to **GC Capture** – a cybersecurity challenge platform for Gordon College students! This project provides a hands-on space to solve CTF (Capture the Flag) challenges, monitor progress, and develop cybersecurity skills in a competitive environment.
+After logging in as a user, you can access the following:
 
-This README not only describes GC Capture but also serves as a guide on writing effective README files.
+- **Home Page** (`/`): Overview of the platform
+- **Profile Page** (`/profile`): Update profile details, upload a profile picture, change password
+- **User Statistics** (`/user-statistics`): View your progress and performance data
+- **Challenges** (`/challenges`): Browse and solve CTF challenges by category
+
+#### How to Solve a Challenge
+
+1. Go to the Challenges page
+2. Click a challenge to view its details
+3. Read the description
+4. Submit your solution (flag)
+5. Receive immediate feedback and score update
 
 ---
 
-## 🧱 Structure of a README.md
+### 3. Admin Features
 
-### 🔖 Title and Description
+If you're logged in as an admin, you can access the following (based on your assigned permissions):
 
-```
-# 🚩🎯 GC Capture / Gordon College CTF
+| Feature                        | Route                        | Permission Required        |
+|--------------------------------|------------------------------|----------------------------|
+| Admin Dashboard                | `/admin/dashboard`           | Any admin                  |
+| Manage Challenges              | `/admin/challenges`          | `canManageChallenges`      |
+| Edit Specific Challenge        | `/admin/challenges/:id`      | `canManageChallenges`      |
+| Events Management              | `/admin/events`              | `canManageEvents`          |
+| View All Events                | `/admin/overall_events`      | Any admin                  |
+| Student Management             | `/admin/students`            | `canManageUsers`           |
+| View Statistics                | `/admin/statistics`          | Any admin                  |
 
-Welcome to GC Capture! Where future defenders train, compete, and dominate.
+> Note: Admins only see features they have permission to access. If you lack a required permission, you'll be redirected to an Unauthorized page.
 
-Gordon College CTF is a cybersecurity challenge platform designed to help students **train, compete, and grow** through solving realistic CTF challenges in a structured environment.
+#### How to Add a Challenge (for admins with `canManageChallenges`)
 
+1. Go to `/admin/challenges`
+2. Click the "Add Challenge" button
+3. Fill in the challenge details (title, description, category, flag, etc.)
+4. Click Save
+5. The challenge will now be available to users in the Challenges section
 
-🛠️ Installation
-1. Clone and set up the project:
+---
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/gc-capture.git
-cd gc-capture
-```
-2. Install dependencies:
+## Navigating the App
 
-```bash
-# Install base dependencies defined in package.json
-npm install
+- Use the sidebar or top navigation to move between pages
+- All sections are clearly labeled (e.g., Dashboard, Profile, Challenges)
+- Admins have additional menu options for managing content (based on permissions)
+- Use "Refresh" buttons on dashboards to update data if needed
 
-# Install react-icons – used for rendering icons in the UI
-npm install react-icons
+---
 
-# Install Recharts – for drawing interactive charts in statistics pages
-npm install recharts
+## Tips for New Users
 
-# Install tw-animate-css – to easily add utility animation classes using Tailwind-compatible naming
-npm install tw-animate-css
+- Start with easier challenges to build confidence
+- Track your progress using the statistics page
+- If you get stuck, try another challenge or review the description again
+- Keep your profile updated for a better experience
 
-# Install Chart.js and react-chartjs-2 – for additional visualizations and dashboard analytics
-npm install chart.js react-chartjs-2
-```
+---
 
-3. Start the local development server:
+## Contributing
 
-```bash
-npm run dev
-```
-
-🚀 Usage
-Once the app is running, users and admins can access the following routes:
-
-Public/User Routes:
-```bash
-/login – Login page for users
-/ – Hero landing page
-/profile – User profile page
-/user-statistics – User performance and statistics page
-/challenges – Page where users can view and solve CTF challenges
-```
-
-Admin Routes:
-```bash
-/admin/dashboard – Admin dashboard overview
-/admin/challenges – Manage and organize challenges
-/admin/specific_challenge – View or edit specific challenge details
-/admin/overall_events – View a list of all events
-/admin/events – Manage events; includes modal for adding new events
-/admin/student – Manage student participants and access controls
-```
-
-## 🤝 Contributing
-
-We welcome contributions from everyone! If you want to help improve GC Capture, follow these steps:
+Want to contribute to the project?
 
 1. Fork this repository
-2. Create a new branch for your feature or fix
-3. Commit your changes with clear messages
-4. Push to your fork and submit a Pull Request
+2. Create a new branch
+3. Make your changes
+4. Commit with clear messages
+5. Push and open a Pull Request
 
-Please follow the existing code style and conventions. If you have questions, feel free to open an issue or ask for guidance. Thank you for helping make this project better!
-
-## Profile Page
-
-The profile page allows users to:
-
-1. View and update their profile information
-2. Upload a profile picture
-3. Change their password
-4. Navigate to their statistics page
-
-### API Integration
-
-The profile page connects to the following API endpoints:
-```bash
-- `GET /users/profile` - Get the current user's profile data
-- `PUT /users/profile` - Update the user's profile data
-- `POST /users/profile/picture` - Upload a profile picture
-- `POST /users/change-password` - Change the user's password
-```
-### Implementation Details
-```bash
-- Uses a dedicated `useProfilePage` hook for API interactions
-- Handles loading states and errors
-- Provides user feedback through toast notifications
-- Supports both absolute and relative profile picture URLs
-```
+---
 
 ## 🛠️ Built With
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)
@@ -187,3 +125,4 @@ The profile page connects to the following API endpoints:
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
 
 ---
+
